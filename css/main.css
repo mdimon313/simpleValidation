@@ -112,6 +112,11 @@ input.checkbox {
     border: none;
     cursor: pointer;
 }
+.check-lbl {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
 .signBtn {
   border: none;
   outline: none;
