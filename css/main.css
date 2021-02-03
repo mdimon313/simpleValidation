@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Open+Sans:wght@300;400;600&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  -moz-backdrop-filter: blur(3px);
+}
+:root {
+  --head-font: 'Nosifer', cursive;
+  --main-font: 'Open Sans', sans-serif;
+}
+
+.container {
+  min-width: 80%;
+  padding: 0 15px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.form {
+  width: 400px;
+  padding: 1.2rem;
+  background: rgba(255,255,255,0.5);
+  border-radius: 4px;
+  z-index: 1;
+  box-shadow: 0px 0px 19px 0px rgba(94, 93, 93, 0.87);
+}
+.form h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgba(53, 53, 53, 0.959);
+  font-family: var(--head-font);
+  font-size: 2.2rem;
+}
+.f-name > label,
+.l-name > label,
+.e-mail > label,
+.u-phone > label,
+.u-password > label{
+  font-family: var(--main-font);
+  margin-bottom: 5px;
+  display: block;
+}
+.f-name,
+.l-name,
+.e-mail,
+.u-phone,
+.u-password,
+.check,
+.submit-btn {
+  margin-bottom: 18px;
+}
+.fname, .lname, .email, .phone, .password {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: .7rem;
+  font-size: 14px;
+  font-family: var(--main-font);
+  color: #333;
+  border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.fname::placeholder,
+.lname::placeholder,
+.email::placeholder,
+.phone::placeholder,
+.password::placeholder {
+  font-size: 15px;
+  color: rgba(102, 102, 102, 0.562);
+}
+.check {
+  color: rgb(20, 20, 20);
+  font-family: var(--main-font);
+  display: flex;
+  align-items: center;
+}
+input.checkbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 7px;
+    border: none;
+    cursor: pointer;
+}
+.signBtn {
+  border: none;
+  outline: none;
+  padding: .5rem 1rem;
+  width: 100%;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: linear-gradient(to right, #076585, #fff);
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.signBtn:hover {
+  background: linear-gradient(to left, #076585, #fff);
+}
+.signBtn:hover i {
+  transform: translateX(5px);
+  transition: all .3s ease-in-out;
+}
+.signBtn i {
+  font-size: 25px;
+  color: #333;
+  margin-left: 10px;
+}
+.login-links {
+  overflow: hidden;
+}
+.login-links p {
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: #272727;
+}
+.login-links p a {
+    text-decoration: none;
+    color: #353535;
+}
+.login-links p a:hover {
+    text-decoration: underline;
+    color: rgb(5, 83, 252);
+}
+
+/* ======END SIGN UP FORM STYLE ========= */
+
+/* OUTPUT STYLE */
+
+section.output {
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+.wrapper {
+  background: rgb(202, 202, 202);
+  width: 400px;
+  padding: 1.6rem;
+  border-radius: 4px;
+  position: relative;
+}
+.wrapper h2 {
+  font-family: var(--head-font);
+  color: rgba(0,0,0,0.6);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.wrapper p {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 8px 0;
+  color: rgba(0,0,0,0.8);
+}
+.wrapper i {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}

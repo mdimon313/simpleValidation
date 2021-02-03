@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple form Validation</title>
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="container">
+		<form action="#" get="POST" id="form" class="form" autocomplete="off">
+		  <h1>Sign Up</h1>
+		  <div class="f-name">
+			<label for="fname">First name</label>
+			<input type="text" id="fname" class="fname" placeholder="first name"  autocomplete="off"/>
+		  </div>
+		  <div class="l-name">
+			<label for="lname">Last name</label>
+			<input type="text" id="lname" class="lname" placeholder="last name" autocomplete="off"/>
+		  </div>
+		  <div class="e-mail">
+			<label for="email">E-mail</label>
+			<input type="email" id="email" class="email" placeholder="enter email" autocomplete="off"/>
+		  </div>
+		  <div class="u-phone">
+			<label for="phone">Phone</label>
+			<input type="tel" id="phone" class="phone" pattern="[0-9]{5}[0-9]{6}" placeholder="phone" />
+		  </div>
+		  <div class="u-password">
+			<label for="password">Password</label>
+			<input type="tel" id="password" class="password" placeholder="password" />
+		  </div>
+		  <div class="check">
+			<input type="checkbox" id="check"  class="checkbox" required/>
+			<label for="check">if you agree our Turms & conditions</label>
+		  </div>
+		  <div class="submit-btn">
+			<button type="button" id="signBtn" class="signBtn">Sign Up <i class="fad fa-sign-in"></i></button>
+		  </div>
+		  <div class="login-links">
+			<p>already have an account <a href="#">login</a></p>
+		  </div>
+		</form>
+  </div>
+
+  <!-- ! OUTPUT SECTION -->
+  <section class="output">
+    <div class="wrapper">
+      <h2>output</h2>
+      <p id="firstName">First Name: </p>
+      <p id="lastName">Last Name: </p>
+      <p id="emailOutput">E-mail:</p>
+      <p id="phoneOutput">Phone: </p>
+      <i class="fas fa-times" id="close"></i>
+    </div>
+  </section>
+  <!-- SCRIPT FILES -->
+  <script src="js/custom.js"></script>
+</body>
+</html>
